@@ -39,7 +39,7 @@ const DataTable = () => {
       <div className="py-8">
         <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
           {
-            data?.Billings?.length === 0 ?
+            data?.length === 0 ?
               <div>
                 <h4 className="text-orange-600 pt-10 text-xl text-center font-medium uppercase">
                   There is no record available
