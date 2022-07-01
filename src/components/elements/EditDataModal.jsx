@@ -38,7 +38,7 @@ const EditDataModal = ({ EditValue }) => {
         try {
             const res = await axios({
                 method: 'put',
-                url: `http://localhost:5500/api/update-billing/${EditValue._id}`,
+                url: `https://powerhack1.herokuapp.com/api/update-billing/${EditValue._id}`,
                 data: data,
                 headers: {
                     token: JSON.parse(localStorage.getItem('token')),
@@ -53,7 +53,7 @@ const EditDataModal = ({ EditValue }) => {
                 setTimeout(() => window.location.reload(), 2500);
             }
         } catch (err) {
-            setTitle("Fail Updated!")
+            setTitle("Updated Fail!")
             setTimeout(()=>setTitle("Update"),3000)
             for (let i = 0; i < err.response.data.errors?.length; i++) {
                 Notify(err.response.data.errors[i], 3000)

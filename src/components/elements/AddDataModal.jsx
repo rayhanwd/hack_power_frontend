@@ -29,7 +29,7 @@ const AddDataModal = () => {
         try {
             const res = await axios({
                 method: 'post',
-                url: `http://localhost:5500/api/add-billing`,
+                url: `https://powerhack1.herokuapp.com/api/add-billing`,
                 data: data,
                 headers: {
                     token: JSON.parse(localStorage.getItem('token')),
@@ -38,8 +38,9 @@ const AddDataModal = () => {
             if (res.status === 200) {
                 setOpen(false);
                 reset();
-                Notify(res.data.msg)
+                Notify(res.data.msg);
                 navigate('/dashboard');
+                setTimeout(() => window.location.reload(), 2500);
             }
         } catch (err) {
             for (let i = 0; i < err.response.data.errors?.length; i++) {

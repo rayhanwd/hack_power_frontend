@@ -30,7 +30,7 @@ const DeleteDataModal = ({ DeleteValue }) => {
         try {
             const res = await axios({
                 method: 'delete',
-                url: `http://localhost:5500/api/delete-billing/${DeleteValue._id}`,
+                url: `https://powerhack1.herokuapp.com/api/delete-billing/${DeleteValue._id}`,
                 data: "",
                 headers: {
                     token: JSON.parse(localStorage.getItem('token')),

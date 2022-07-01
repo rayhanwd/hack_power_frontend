@@ -1,6 +1,11 @@
 import React from 'react'
 import logo from '../assets/images/power_hack_small.png';
 const Header = () => {
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        window.location.reload();
+    }
     return (
         <nav className="bg-white dark:bg-gray-800  shadow py-4 overflow-hidden">
             <div className="max-w-7xl mx-auto px-8">
@@ -22,6 +27,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="ml-4 flex items-center md:ml-6">
+                            <button onClick={() => handleLogout()}>Log out</button>
                         </div>
                     </div>
                 </div>

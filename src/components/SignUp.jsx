@@ -39,7 +39,7 @@ const SignUp = () => {
     try {
       const res = await axios({
         method: 'post',
-        url: `http://localhost:5500/api/registration`,
+        url: `https://powerhack1.herokuapp.com/api/registration`,
         data: data
       });
       console.log(res)

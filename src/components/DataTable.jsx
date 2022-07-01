@@ -12,14 +12,14 @@ const DataTable = () => {
   const [count, setCount] = useState(0);
   const { state } = useContext(SearchContext);
 
-  useEffect(() => {
-    let Items = data?.filter(item => item.fullName === state || item.phone === state || item.email === state)
-    setData(Items)
-  }, [])
+  // useEffect(() => {
+  //   let Items = data?.filter(item => item.fullName === state || item.phone === state || item.email === state)
+  //   setData(Items)
+  // }, [])
 
   const fetchData = async (count = 0) => {
     try {
-      const res = await axios.get(`http://localhost:5500/api/billing-list?page=${count}`, {
+      const res = await axios.get(`https://powerhack1.herokuapp.com/api/billing-list?page=${count}`, {
         headers: {
           token: JSON.parse(localStorage.getItem('token')),
         }

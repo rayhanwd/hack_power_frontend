@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import RequireAuth from './auth/Protected';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
@@ -12,6 +12,7 @@ const App = () => {
   return (
     <SearchContext.Provider value={{ state: searchValue, setValue }}>
       <Routes>
+      <Route path="/" element={<Navigate to="/dashboard" />} />
         <Route path="/dashboard"
           element={
             <React.Suspense fallback={<>...</>}>

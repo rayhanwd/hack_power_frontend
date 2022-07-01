@@ -40,7 +40,7 @@ const SignIn = () => {
     try {
       const res = await axios({
         method: 'post',
-        url: `http://localhost:5500/api/login`,
+        url: `https://powerhack1.herokuapp.com/api/login`,
         data: data
       });
       console.log(res)
