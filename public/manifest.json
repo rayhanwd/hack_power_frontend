@@ -1,0 +1,25 @@
+{
+  "short_name": "Power Hack",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "power_hack_fav.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "power_hack_fav.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "power_hack_fav.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
