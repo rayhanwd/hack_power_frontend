@@ -94,7 +94,7 @@ const DataTable = () => {
                         </button>
                       )
                     }
-                    <button onClick={() => count >= 0 && setCount(prevCount => prevCount + 1)} type="button" className={paginationRightStyle}>
+                    <button onClick={() => count === 0 && setCount(prevCount => prevCount + 1)} type="button" className={paginationRightStyle}>
                       <MdKeyboardArrowRight />
                     </button>
                   </div>
